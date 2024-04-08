@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+fatal() { echo "fatal: $*" 1>&2; exit 1; }
+
+cmd="$(basename "$0")"
+command -v "$cmd" >/dev/null || fatal "$cmd not found"
+[ "$MERCURY_SOCKS" ] || fatal "MERCURY_SOCKS not set"
+
+export HTTP_PROXY="socks5://$MERCURY_SOCKS"
+exec "$cmd" "$@"
