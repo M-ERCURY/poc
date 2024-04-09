@@ -51,7 +51,7 @@ sudo ./mercury config circuit.hops 2
 
 ### MacOS ARM
 ```bash
-go build -o builds/macos/arm/mercury cmd/cli/main.go
+GOOS=darwin GOARCH=arm64 go build -o builds/macos/arm/mercury cmd/cli/main.go
 ```
 
 ### MacOS Intel
