@@ -41,7 +41,7 @@ sudo ./mercury start
 ./mercury stop
 ```
 
-## Common
+## Change number of hops
 ```bash
 # change the number of hops(defalt: 1, max: 2)
 sudo ./mercury config circuit.hops 2
@@ -52,4 +52,9 @@ sudo ./mercury config circuit.hops 2
 ### MacOS ARM
 ```bash
 go build -o builds/macos/arm/mercury cmd/cli/main.go
+```
+
+### MacOS Intel
+```bash
+GOOS=darwin GOARCH=amd64 go build -o builds/macos/intel/mercury cmd/cli/main.go
 ```
