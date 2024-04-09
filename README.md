@@ -58,3 +58,8 @@ go build -o builds/macos/arm/mercury cmd/cli/main.go
 ```bash
 GOOS=darwin GOARCH=amd64 go build -o builds/macos/intel/mercury cmd/cli/main.go
 ```
+
+### Linux
+```bash
+GOOS=linux GOARCH=amd64 go build -o builds/linux/mercury cmd/cli/main.go
+```
